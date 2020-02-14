@@ -1,0 +1,14 @@
+version: "2"
+services:
+  pwn:
+    build:
+      context: .
+      dockerfile: example.Dockerfile
+    image: test_base_pwn_native_1804
+    volumes:
+      - ./tcpdump:/var/lib/tcpdump
+    ports:
+      - "10000:10000"
+    environment:
+      - FLAG=ctfhub{base_pwn}
+      - TCPDUMP_ENABLE=1

@@ -1,0 +1,7 @@
+version: "2"
+services:
+  base_pwn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ctfhub/base_pwn_native_1804

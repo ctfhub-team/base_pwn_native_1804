@@ -1,0 +1,6 @@
+name: base_pwn_native_1804
+title: 基础镜像 PWN Native - Ubuntu 1804
+desc: 基础镜像 PWN Native - Ubuntu 1804
+tags:
+  - pwn
+  - ubuntu1804
