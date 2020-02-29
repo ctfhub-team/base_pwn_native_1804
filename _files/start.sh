@@ -5,6 +5,15 @@ if [[ -f /home/ctf/pwn ]]; then
     chmod 750 /home/ctf/pwn
 fi
 
+if [ -n $PORT ]; then
+    if [[ $PORT -gt 0 ]]; then
+        socat TCP4-LISTEN:10000,reuseaddr,fork,su=nobody TCP4:127.0.01:$PORT &
+    else
+        echo "PORT [$PORT] is not vaild!"
+        exit 1
+    fi
+fi
+
 if [ -z $TCPDUMP_ENABLE ]; then
     echo "Set TCPDUMP_ENABLE to enable packet capture."
 else

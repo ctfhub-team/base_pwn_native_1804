@@ -8,8 +8,8 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/' /etc/apt/sources
     sed -i '/security/d' /etc/apt/sources.list && \
     apt-get update -y && \
     apt-get upgrade -y; \
-    # netbase tcpdump xinetd
-    apt-get install -y --no-install-recommends netbase tcpdump; \
+    # netbase tcpdump xinetd socat
+    apt-get install -y --no-install-recommends netbase tcpdump socat; \
     # lib
     apt-get install -y lib32ncurses5 lib32z1 lib32stdc++6; \
     # configure
